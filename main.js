@@ -1,6 +1,7 @@
 var notificationId = 'alarm';
 var interval = 30000;
 
+//TODO create setting UI
 var events = {
     '12:00' : {
         'message': 'lunch time',
@@ -15,7 +16,7 @@ var notify = function(message) {
         type: 'basic',
         title: 'Simple Alarm',
         message: message,
-        iconUrl: 'bell.png',
+        iconUrl: 'bell.png', // icon image from Glyphish 3 http://www.glyphish.com
     }
     chrome.notifications.create(notificationId, option, function(notificationId) {
         //callback. nothing to do.
